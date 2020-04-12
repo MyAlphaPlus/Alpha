@@ -1,5 +1,6 @@
 import discord
 import time
+import os
 from discord.ext import commands
 import random
 notice = list()
@@ -105,5 +106,5 @@ async def 디엠(ctx, user:discord.Member, *, text:str):
 async def 서버목록(msg):
     for i in bot.guilds:
         await msg.send(i)
-
-bot.run('Njk4NDA5NzUwMTczNDUwMzMx.XpFbFw.IoR_hBqk2csoeG3eQQkq2iEJsJw')
+access_token = os.environ["BotToken"]
+bot.run(access_token)
